@@ -22,9 +22,32 @@
     {title: 'News', link: '#'},
     {title: 'About', link: '#'},
     {title: 'Professional', link: '#'}
-    ]; 
+    ];
 
-   const salonsList = 'Plush Salon 92101';
+
+    const slider1 = [
+        {src: 'z8M0Fa1JVco'},
+        {src: 'Wi2KcdoCuo4'},
+        {src: '8H6dYUgQKB8'},
+        {src: 'PZjGrmHdFME'},
+        {src: '_wLGr24VeoI'},
+        {src: 'DG4FAU5qmMY'}
+    ];
+
+    const slider2 = [
+        {src: 'RmNWNLXmswk'},
+        {src: '-tztXOz8Vc0'},
+        {src: 'kUfIVtyydgQ'}
+    ];
+
+    const slider3 = [
+        {src: 'VmmwwzR536g'},
+        {src: 'KcyYvl3yduI'},
+        {src: '6oPBFnsqJW8'}
+
+    ];
+
+    const salonsList = 'Plush Salon 92101';
 
     const socialNet = [
     {url: '../img/ico_facebook.svg' , link: '#'},
@@ -32,7 +55,7 @@
     {url: '../img/ico_pinterest.svg' , link: '#'},
     {url: '../img/ico_youtube.svg' , link: '#'},
     {url: '../img/ico_instagram.svg' , link: '#'}
-    ]; 
+    ];
     
     const footerLinks = [
     {title: 'privacy policy' , link: '#'},
@@ -47,6 +70,11 @@
 
 
 <header class="header">
+
+
+
+
+
 
     <nav class="header__nav">
         <input   type="checkbox" id="toggle-menu">
@@ -96,104 +124,51 @@
     <h2 class ="content__title">Step <b> by</b> Step</h2>
     <div class="container">
 
-        <button id="prev" class="container__prev"></button>
+        <div  class="video-slider">
 
-        <button id="next" class="container__next"></button>
 
-        <div  class="video-slider">               
-            <ul id="carousel" class="carousel">
-                 <li class="video-slider__item">     
-                    <a data-fancybox href="https://youtu.be/z8M0Fa1JVco&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                         <div class="videos-block__icon"></div>
-                        <img class="videos-block__img" src="https://img.youtube.com/vi/z8M0Fa1JVco/maxresdefault.jpg" alt="">
+            <% slider1.forEach((item) => { %>
+                <div  class="video-slider__item">
 
+                    <a data-fancybox href="https://youtu.be/<%= item.src; %>&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                        <div class="videos-block__icon"></div>
+                        <img class="videos-block__img" src="https://img.youtube.com/vi/<%= item.src; %>/maxresdefault.jpg" alt="">
                     </a>
-                </li>
-                <li class="video-slider__item">     
-                    <a data-fancybox href="https://youtu.be/Wi2KcdoCuo4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                         <div class="videos-block__icon"></div>
-                    <img class="videos-block__img" src="https://img.youtube.com/vi/Wi2KcdoCuo4/maxresdefault.jpg" alt="">
-
-                </a>
-            </li>
-
-            <li class="video-slider__item">     
-
-                <a data-fancybox href="https://youtu.be/8H6dYUgQKB8&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                     <div class="videos-block__icon"></div>
-                    <img class="videos-block__img" src="https://img.youtube.com/vi/8H6dYUgQKB8/maxresdefault.jpg" alt="">
-
-                </a>
-            </li>
-
-            <li class="video-slider__item">     
-                <a data-fancybox href="https://youtu.be/PZjGrmHdFME&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                     <div class="videos-block__icon"></div>
-                    <img class="videos-block__img" src="https://img.youtube.com/vi/PZjGrmHdFME/maxresdefault.jpg" alt="">
-
-                </a>
-            </li>
-
-            <li class="video-slider__item">    
-                <a data-fancybox href="https://youtu.be/_wLGr24VeoI&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                     <div class="videos-block__icon"></div>
-                    <img class="videos-block__img" src="https://img.youtube.com/vi/_wLGr24VeoI/maxresdefault.jpg" alt="">
-
-                </a>
-            </li> 
-             <li class="video-slider__item">     
-                <a data-fancybox href="https://youtu.be/DG4FAU5qmMY&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                     <div class="videos-block__icon"></div>
-                    <img class="videos-block__img" src="https://img.youtube.com/vi/DG4FAU5qmMY/maxresdefault.jpg" alt="">
-                </a>
-            </li>
-        </ul>
+                </div>
+            <% }) %>
+        </div>
     </div>
-
     <button class="container__button">Load more</button>
 </div>
 </section>
+
+
+
+
+
 
 <section class="content">
     <h2 class ="content__title">Craft <b>Education</b></h2>
     <div class="container">
 
-        <button id="prev" class="container__prev"></button>
 
-        <button id="next" class="container__next"></button>
+            <div  class="video-slider">
 
-        <div  class="video-slider">               
-            <ul id="carousel" class="carousel">
-                 <li class="video-slider__item">     <a data-fancybox href="https://youtu.be/RmNWNLXmswk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                     <div class="videos-block__icon"></div>
-                        <img class="videos-block__img" src="https://img.youtube.com/vi/RmNWNLXmswk/maxresdefault.jpg" alt="">
 
-                    </a>
-                </li>
-                <li class="video-slider__item">     
-                    <a data-fancybox href="https://youtu.be/-tztXOz8Vc0&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                         <div class="videos-block__icon"></div>
-                    <img class="videos-block__img" src="https://img.youtube.com/vi/-tztXOz8Vc0/maxresdefault.jpg" alt="">
+                <% slider2.forEach((item) => { %>
+                    <div  class="video-slider__item">
 
-                </a>
-            </li>
-
-            <li class="video-slider__item">     
-
-                <a data-fancybox href="https://youtu.be/kUfIVtyydgQ&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                     <div class="videos-block__icon"></div>
-                    <img class="videos-block__img" src="https://img.youtube.com/vi/kUfIVtyydgQ/maxresdefault.jpg" alt="">
-
-                </a>
-            </li>
-
-            
-             
-        </ul>
+                        <a data-fancybox href="https://youtu.be/<%= item.src; %>&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                            <div class="videos-block__icon"></div>
+                            <img class="videos-block__img" src="https://img.youtube.com/vi/<%= item.src; %>/maxresdefault.jpg" alt="">
+                        </a>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+        <button class="container__button">Load more</button>
     </div>
 
-    <button class="container__button">Load more</button>
-</div>
 </section>
 
 
@@ -201,42 +176,22 @@
     <h2 class ="content__title">Inspiration</h2>
     <div class="container">
 
-        <button id="prev" class="container__prev"></button>
+        <div  class="video-slider">
 
-        <button id="next" class="container__next"></button>
 
-        <div  class="video-slider">               
-            <ul id="carousel" class="carousel">
-                 <li class="video-slider__item">     <a data-fancybox href="https://youtu.be/VmmwwzR536g&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                     <div class="videos-block__icon"></div>
-                        <img class="videos-block__img" src="https://img.youtube.com/vi/VmmwwzR536g/maxresdefault.jpg" alt="">
+            <% slider3.forEach((item) => { %>
+                <div  class="video-slider__item">
 
+                    <a data-fancybox href="https://youtu.be/<%= item.src; %>&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                        <div class="videos-block__icon"></div>
+                        <img class="videos-block__img" src="https://img.youtube.com/vi/<%= item.src; %>/maxresdefault.jpg" alt="">
                     </a>
-                </li>
-              <li class="video-slider__item">     
-
-                <a data-fancybox href="https://youtu.be/6oPBFnsqJW8&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                     <div class="videos-block__icon"></div>
-                    <img class="videos-block__img" src="https://img.youtube.com/vi/6oPBFnsqJW8/maxresdefault.jpg" alt="">
-
-                </a>
-            </li>
-
-            <li class="video-slider__item">     
-
-                <a data-fancybox href="https://youtu.be/qH4O8feho2w&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                     <div class="videos-block__icon"></div>
-                    <img class="videos-block__img" src="https://img.youtube.com/vi/qH4O8feho2w/maxresdefault.jpg" alt="">
-
-                </a>
-            </li>
-
-            
-             
-        </ul>
+                </div>
+            <% }) %>
+        </div>
     </div>
     <button class="container__button">Load more</button>
-</div>
+    </div>
 </section>
 
 
@@ -266,6 +221,8 @@
         </ul>
  
 </footer>
+    
+
 
 
 <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>

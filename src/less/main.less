@@ -405,6 +405,7 @@ h2, h3, h4, h5, h6, p{
     &__prev, &__next{
         border-radius: 4px;
         position:absolute;
+        z-index: 1000;
         height:40px;
         width: 40px;
         top:36%;
@@ -419,12 +420,12 @@ h2, h3, h4, h5, h6, p{
     }
 
     &__prev{
-        left:0;
+        left:-34px;
         transform: scaleX(-1);
     }
 
     &__next{
-        right:0;
+        right:-34px;
     }
 
     &__button{
@@ -451,22 +452,23 @@ h2, h3, h4, h5, h6, p{
     margin: 0 auto;
     transition: 1s;
     height: 590px;
-    overflow: hidden;
+    /*overflow: hidden;*/
+
     
      @media @tablet {
         max-height: 200px;
-        width: 610px;
+        width: 620px;
     }
 
     @media @desktop {
-        width: 930px;;
+        width: 928px;;
     }
 
-   &__item{
+   &__item {
     position:relative;
         width: 100%;
-        max-width: 320px;
-        max-height:200px;
+        min-width: 300px !important;
+        max-height:200px !important;
         display: block;
         margin: 0px auto;
         margin-bottom: 30px;
@@ -474,7 +476,7 @@ h2, h3, h4, h5, h6, p{
             height: 180px;
             width: 300px;
             display: inline-block;
-            margin-right: 10px
+            margin: 0 5px;
         }
     }
 }
