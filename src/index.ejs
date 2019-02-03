@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">
+</head>
+<body>
+
+    <% const menuItems = [
+    {title: 'HairCare', link: '#'},
+    {title: 'Color', link: '#'},
+    {title: 'Styling', link: '#'},
+    {title: 'Texture', link: '#'},
+    {title: 'Get Inspired', link: '#'},
+    {title: 'News', link: '#'},
+    {title: 'About', link: '#'},
+    {title: 'Professional', link: '#'}
+    ]; 
+
+   const salonsList = 'Plush Salon 92101';
+
+    const socialNet = [
+    {url: '../img/ico_facebook.svg' , link: '#'},
+    {url: '../img/ico_twitter.svg' , link: '#'},
+    {url: '../img/ico_pinterest.svg' , link: '#'},
+    {url: '../img/ico_youtube.svg' , link: '#'},
+    {url: '../img/ico_instagram.svg' , link: '#'}
+    ]; 
+    
+    const footerLinks = [
+    {title: 'privacy policy' , link: '#'},
+    {title: 'terms of use' , link: '#'},
+    {title: 'contact us' , link: '#'},
+    {title: 'newsletter' , link: '#'},
+    {title: 'sitemap' , link: '#'}
+    ]; 
+    
+
+    %>
+
+
+<header class="header">
+
+    <nav class="header__nav">
+        <input   type="checkbox" id="toggle-menu">
+        <label class="header__nav-toggle"  for="toggle-menu"> </label>
+        <ul class="header__nav-list header__nav-list_open">
+            <% menuItems.forEach((item) => { %>
+            <li class="header__item"><a class="header__link" href="<%= item.link; %>"><%= item.title %></a></li>
+            <% }) %>
+        </ul>
+    </nav>
+    <span class="header__title"></span>
+    <div class="header__search">
+        <div class="header__location">
+            <h5>Nearest salon</h5>
+            <p><%= salonsList %></p>
+        </div>
+        <form action="" class="search">
+            <label for="search-button"></label>
+            <input type="checkbox" id="search-button" class="search__button">
+            <label class="search__button-toggle"  for="search__button"> </label>
+            <label>
+                <input class="search__field " type="text">
+            </label>
+        </form>
+    </div>
+    
+</header>
+<div class="breadcrumbs">
+    <span class="breadcrumbs__items" ><a class="breadcrumbs__item" href="#">Home</a> / <a class="breadcrumbs__item breadcrumbs__item_current" href="#">Videos</a> </span>
+</div>
+
+
+<section class ="videos-block">
+
+    <div class="videos-block__item">
+        <h2 class ="videos-block__title">Videos</h2>
+        <a data-fancybox href="https://youtu.be/KZ1icCEjW7s&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+            <div class="videos-block__icon videos-block__icon_wide"></div>
+            <img class="videos-block__img" src="https://img.youtube.com/vi/KZ1icCEjW7s/maxresdefault.jpg" alt="">
+
+        </a>
+        <p class="videos-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lobortis, nisl at ullamcorper egestas, felisadi piscing dolor, a interdum lorem urna quis magna.</p><hr class="videos-block__line">
+        </div>
+</section>
+
+<section class="content">
+    <h2 class ="content__title">Step <b> by</b> Step</h2>
+    <div class="container">
+
+        <button id="prev" class="container__prev"></button>
+
+        <button id="next" class="container__next"></button>
+
+        <div  class="video-slider">               
+            <ul id="carousel" class="carousel">
+                 <li class="video-slider__item">     
+                    <a data-fancybox href="https://youtu.be/z8M0Fa1JVco&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                         <div class="videos-block__icon"></div>
+                        <img class="videos-block__img" src="https://img.youtube.com/vi/z8M0Fa1JVco/maxresdefault.jpg" alt="">
+
+                    </a>
+                </li>
+                <li class="video-slider__item">     
+                    <a data-fancybox href="https://youtu.be/Wi2KcdoCuo4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                         <div class="videos-block__icon"></div>
+                    <img class="videos-block__img" src="https://img.youtube.com/vi/Wi2KcdoCuo4/maxresdefault.jpg" alt="">
+
+                </a>
+            </li>
+
+            <li class="video-slider__item">     
+
+                <a data-fancybox href="https://youtu.be/8H6dYUgQKB8&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                     <div class="videos-block__icon"></div>
+                    <img class="videos-block__img" src="https://img.youtube.com/vi/8H6dYUgQKB8/maxresdefault.jpg" alt="">
+
+                </a>
+            </li>
+
+            <li class="video-slider__item">     
+                <a data-fancybox href="https://youtu.be/PZjGrmHdFME&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                     <div class="videos-block__icon"></div>
+                    <img class="videos-block__img" src="https://img.youtube.com/vi/PZjGrmHdFME/maxresdefault.jpg" alt="">
+
+                </a>
+            </li>
+
+            <li class="video-slider__item">    
+                <a data-fancybox href="https://youtu.be/_wLGr24VeoI&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                     <div class="videos-block__icon"></div>
+                    <img class="videos-block__img" src="https://img.youtube.com/vi/_wLGr24VeoI/maxresdefault.jpg" alt="">
+
+                </a>
+            </li> 
+             <li class="video-slider__item">     
+                <a data-fancybox href="https://youtu.be/DG4FAU5qmMY&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                     <div class="videos-block__icon"></div>
+                    <img class="videos-block__img" src="https://img.youtube.com/vi/DG4FAU5qmMY/maxresdefault.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <button class="container__button">Load more</button>
+</div>
+</section>
+
+<section class="content">
+    <h2 class ="content__title">Craft <b>Education</b></h2>
+    <div class="container">
+
+        <button id="prev" class="container__prev"></button>
+
+        <button id="next" class="container__next"></button>
+
+        <div  class="video-slider">               
+            <ul id="carousel" class="carousel">
+                 <li class="video-slider__item">     <a data-fancybox href="https://youtu.be/RmNWNLXmswk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                     <div class="videos-block__icon"></div>
+                        <img class="videos-block__img" src="https://img.youtube.com/vi/RmNWNLXmswk/maxresdefault.jpg" alt="">
+
+                    </a>
+                </li>
+                <li class="video-slider__item">     
+                    <a data-fancybox href="https://youtu.be/-tztXOz8Vc0&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                         <div class="videos-block__icon"></div>
+                    <img class="videos-block__img" src="https://img.youtube.com/vi/-tztXOz8Vc0/maxresdefault.jpg" alt="">
+
+                </a>
+            </li>
+
+            <li class="video-slider__item">     
+
+                <a data-fancybox href="https://youtu.be/kUfIVtyydgQ&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                     <div class="videos-block__icon"></div>
+                    <img class="videos-block__img" src="https://img.youtube.com/vi/kUfIVtyydgQ/maxresdefault.jpg" alt="">
+
+                </a>
+            </li>
+
+            
+             
+        </ul>
+    </div>
+
+    <button class="container__button">Load more</button>
+</div>
+</section>
+
+
+<section class="content">
+    <h2 class ="content__title">Inspiration</h2>
+    <div class="container">
+
+        <button id="prev" class="container__prev"></button>
+
+        <button id="next" class="container__next"></button>
+
+        <div  class="video-slider">               
+            <ul id="carousel" class="carousel">
+                 <li class="video-slider__item">     <a data-fancybox href="https://youtu.be/VmmwwzR536g&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                     <div class="videos-block__icon"></div>
+                        <img class="videos-block__img" src="https://img.youtube.com/vi/VmmwwzR536g/maxresdefault.jpg" alt="">
+
+                    </a>
+                </li>
+              <li class="video-slider__item">     
+
+                <a data-fancybox href="https://youtu.be/6oPBFnsqJW8&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                     <div class="videos-block__icon"></div>
+                    <img class="videos-block__img" src="https://img.youtube.com/vi/6oPBFnsqJW8/maxresdefault.jpg" alt="">
+
+                </a>
+            </li>
+
+            <li class="video-slider__item">     
+
+                <a data-fancybox href="https://youtu.be/qH4O8feho2w&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                     <div class="videos-block__icon"></div>
+                    <img class="videos-block__img" src="https://img.youtube.com/vi/qH4O8feho2w/maxresdefault.jpg" alt="">
+
+                </a>
+            </li>
+
+            
+             
+        </ul>
+    </div>
+    <button class="container__button">Load more</button>
+</div>
+</section>
+
+
+<footer class="footer">
+    <ul class="footer-social">
+            <% socialNet.forEach((item) => { %>
+            <li class="footer-social__item">
+                <a class="footer-social__link" href="<%= item.link; %>">
+                    <object class="footer-social__svg"   type="image/svg+xml" data="<%= item.url; %>">    
+                    </object>
+                </a>
+            </li>
+            <% }) %>
+    </ul>
+
+    
+       
+        
+        <ul class="footer-location">
+            <li> <span >Location:</span> <a  class="footer-location__link"  data-fancybox="" data-options="{&quot;iframe&quot; : {&quot;css&quot; : {&quot;width&quot; : &quot;80%&quot;, &quot;height&quot; : &quot;80%&quot;}}}" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2709.9415133812863!2d38.92301161567053!3d47.217726679160805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3fd45e2ce7173%3A0xc7ca941d3b43df1a!2sOggetto!5e0!3m2!1sru!2sru!4v1548580169384" class="btn btn-primary">United states</a></li>
+            <li><span>Language: english</span></li>
+        </ul>
+        <ul class="footer-links">
+            <% footerLinks.forEach((item) => { %>
+            <li class="footer-links__item"><a class="footer-links__link" href="<%= item.link; %>"><%= item.title %></a></li>
+            <% }) %>
+        </ul>
+ 
+</footer>
+
+
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+<script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
