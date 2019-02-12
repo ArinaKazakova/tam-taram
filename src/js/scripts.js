@@ -1,4 +1,4 @@
- 
+
 
 	//Toggle menu
     $('.header__nav-list').removeClass('header__nav-list_open');
@@ -39,7 +39,7 @@
             speed: 300,
             adaptiveHeight:true,
             slidesToShow: 3,
-            slidesToScroll: 1,
+            slidesToScroll: 2,
 
             prevArrow: ' <button id="prev" class="container__prev"></button>',
             nextArrow: ' <button id="next" class="container__next"></button>',
@@ -48,6 +48,15 @@
                     breakpoint: 1111,
                     settings: {
                         slidesToShow: 2,
+                        slidesToScroll: 1
+
+                    }
+                },
+
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
                         slidesToScroll: 1
 
                     }

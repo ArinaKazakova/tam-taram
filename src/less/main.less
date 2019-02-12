@@ -344,8 +344,7 @@ p {
         border: none;
         height: 1px;
         max-width: 96%;
-        margin: 10px auto;
-        margin-bottom: 60px;
+        margin: 10px auto 60px;
         background: #000;
     }
 }
@@ -396,7 +395,7 @@ p {
     &__next {
         border-radius: 4px;
         position: absolute;
-        z-index: 1000;
+        z-index: 1100;
         height: 40px;
         width: 40px;
         top: 36%;
@@ -410,12 +409,12 @@ p {
     }
 
     &__prev {
-        left: -34px;
+        left: -44px;
         transform: scaleX(-1);
     }
 
     &__next {
-        right: -34px;
+        right: -44px;
     }
 
     &__button {
@@ -435,13 +434,19 @@ p {
     }
 }
 
+.slick-track,
+.slick-list {
+    @media @phone-strict {
+        max-width: 320px;
+        height: 625px !important;
+    }
+}
+
 .video-slider {
     position: relative;
     display: block;
     margin: 0 auto;
     transition: 1s;
-    height: 590px;
-
 
     @media @tablet {
         max-height: 200px;
