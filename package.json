@@ -18,7 +18,7 @@
     "stylelint": "^7.10.1"
   },
   "dependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-less": "^3.3.0",
     "natives": "^1.1.6"
   }
